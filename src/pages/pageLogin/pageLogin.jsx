@@ -7,9 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { get } from 'lodash';
 
 // Components
-import Nav from '../components/Nav/Nav';
+import Nav from '../components/Nav';
 import Loading from '../components/Loading/Loading';
-import AnimatedBackground from '../components/AnimatedBackground/AnimatedBackground';
 import * as actions from '../../store/modules/auth/actions';
 import {
   LoginAppContainer,
@@ -60,7 +59,6 @@ export default function Login(props) {
     <LoginAppContainer>
       <Loading isLoading={isLoading} />
       <Nav />
-      <AnimatedBackground />
       <Container>
         <ContainerLogin className="login-container">
           <PageTitle>Login</PageTitle>

@@ -7,7 +7,7 @@ export const SideMenu = styled.div`
   left: 0;
   height: 100vh;
   width: 60vw;
-  background-color: grey;
+  background-color: #cecece;
   z-index: 999;
   overflow: hidden;
 
@@ -47,9 +47,23 @@ export const CloseSideMenu = styled.div`
 `;
 
 export const MenuList = styled.ul`
+  margin-top: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
 `;
 
-export const MenuItem = styled.li``;
+export const MenuItem = styled.li`
+  display: flex;
+  justify-content: left;
+  height: 50px;
+  width: 100%;
+  padding-left: 20px;
+`;
 
-export const LinkPage = styled(Link)``;
+export const LinkPage = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-size: 34px;
+`;

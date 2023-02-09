@@ -12,7 +12,7 @@ import {
 import history from '../../services/history';
 
 import page404 from '../../assets/404.png';
-import Nav from '../components/Nav/Nav';
+import Nav from '../components/Nav';
 
 export default function Page404() {
   const [Timer, setTimer] = React.useState(5);

@@ -27,7 +27,7 @@ export default function Nav() {
       {showMenu ? (
         <div>
           <SideMenu>
-            <Bars size={30} onClick={handleShowMenu} />
+            <Bars size={30} onClick={handleShowMenu} color="black" />
             <MenuList>
               <MenuItem>
                 <LinkPage to="/">Inicio</LinkPage>

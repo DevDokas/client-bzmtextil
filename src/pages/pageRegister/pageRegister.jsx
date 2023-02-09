@@ -14,9 +14,8 @@ import {
   ButtonContainer,
   RegisterButton,
 } from './styles';
-import Nav from '../components/Nav/Nav';
+import Nav from '../components/Nav';
 import Loading from '../components/Loading/Loading';
-import AnimatedBackground from '../components/AnimatedBackground/AnimatedBackground';
 
 export default function Register() {
   const navigate = useNavigate();
@@ -82,7 +81,6 @@ export default function Register() {
     <RegisterAppContainer>
       <Loading isLoading={isLoading} />
       <Nav />
-      <AnimatedBackground />
       <ContainerRegister>
         <FormContainer className="form-container">
           <PageTitle>Registrar-se</PageTitle>
