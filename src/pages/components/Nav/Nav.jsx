@@ -1,52 +1,72 @@
 // React & Etc
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { FaUserCircle } from 'react-icons/fa';
+import React, { useState } from 'react';
 
-// Styles
-import { Link } from 'react-router-dom';
+// Components
+import { Container, Bars } from './styles';
 import {
-  NavBar,
-  NavMenu,
-  NavMenuItem,
-  NavLink,
-  NavLogo,
-  NavContainer,
-  UserContainer,
-  UserLink,
-} from './styles';
-
-import LogoIcon from '../../../assets/logo.png';
-import ProfileIcon from '../../../assets/userimg.png';
+  SideMenu,
+  CloseSideMenu,
+  MenuList,
+  MenuItem,
+  LinkPage,
+} from './styles/menuStyle';
 
 export default function Nav() {
-  // TESTE!!! REMOVER DEPOIS!!!!
-  /*   const botaoClicado = useSelector((state) => state.example.botaoClicado); */
-  // TESTE!!! REMOVER DEPOIS!!!!
+  const [showMenu, setShowMenu] = useState(false);
+
+  function handleShowMenu() {
+    if (showMenu === false) {
+      setShowMenu(true);
+    } else {
+      setShowMenu(false);
+    }
+  }
 
   return (
-    <NavContainer>
-      <NavBar>
-        <Link to="/">
-          <NavLogo src={LogoIcon} />
-        </Link>
-        {/* TESTE!!! REMOVER DEPOIS!!!! */}
-        {/*         {botaoClicado ? 'True' : 'False'} */}
-        {/* TESTE!!! REMOVER DEPOIS!!!! */}
-        <NavMenu>
-          <NavMenuItem>
-            <NavLink to="/">Início</NavLink>
-          </NavMenuItem>
-          <NavMenuItem>
-            <NavLink to="/about">Sobre</NavLink>
-          </NavMenuItem>
-        </NavMenu>
-        <UserContainer>
-          <UserLink to="/user">
-            <FaUserCircle className="UserIcon" color="black" opacity="85%" />
-          </UserLink>
-        </UserContainer>
-      </NavBar>
-    </NavContainer>
+    <Container>
+      {showMenu ? (
+        <div>
+          <SideMenu>
+            <Bars size={30} onClick={handleShowMenu} />
+            <MenuList>
+              <MenuItem>
+                <LinkPage to="/">Inicio</LinkPage>
+              </MenuItem>
+              <MenuItem>
+                <LinkPage to="/about">Sobre</LinkPage>
+              </MenuItem>
+              <MenuItem>
+                <LinkPage to="/store">Loja</LinkPage>
+              </MenuItem>
+              <MenuItem>
+                <LinkPage to="/sac">SAC</LinkPage>
+              </MenuItem>
+            </MenuList>
+          </SideMenu>
+        </div>
+      ) : (
+        <div>
+          <Bars size={30} onClick={handleShowMenu} />
+          <CloseSideMenu>
+            <Bars size={30} onClick={handleShowMenu} />
+            <MenuList>
+              <MenuItem>
+                <LinkPage to="/">Inicio</LinkPage>
+              </MenuItem>
+              <MenuItem>
+                <LinkPage to="/about">Sobre</LinkPage>
+              </MenuItem>
+              <MenuItem>
+                <LinkPage to="/store">Loja</LinkPage>
+              </MenuItem>
+              <MenuItem>
+                <LinkPage to="/sac">SAC</LinkPage>
+              </MenuItem>
+            </MenuList>
+          </CloseSideMenu>
+        </div>
+        // <Bars size={30} onClick={handleShowMenu} className="open" />
+      )}
+    </Container>
   );
 }

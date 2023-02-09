@@ -17,9 +17,9 @@ export default function AppRoutes() {
       {/* About */}
       <Route path="/about/" element={<About />} />
       {/* Store */}
-      <Route path="/store/" element={<Page404 />}/>
+      <Route path="/store/" element={<Page404 />} />
       {/* SAC */}
-      <Route path="/sac/" element={<Page404 />}/>
+      <Route path="/sac/" element={<Page404 />} />
       {/* Page 404 */}
       <Route path="*" element={<Page404 />} />
     </Routes>
