@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import * as Color from '../../../../config/colors';
 
 export const Container = styled.div`
-  z-index: 2;
+  z-index: 999;
 `;
 
 export const Bars = styled(FaBars)`

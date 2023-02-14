@@ -46,9 +46,9 @@ export default function Nav() {
         </div>
       ) : (
         <div>
-          <Bars size={30} onClick={handleShowMenu} />
+          <Bars size={30} onClick={handleShowMenu} color="black" />
           <CloseSideMenu>
-            <Bars size={30} onClick={handleShowMenu} />
+            <Bars size={30} onClick={handleShowMenu} color="black" />
             <MenuList>
               <MenuItem>
                 <LinkPage to="/">Inicio</LinkPage>

@@ -16,16 +16,32 @@ export default function Footer() {
     <Container>
       <List>
         <ItemList>
-          <FaWhatsapp size={30} onClick={() => navigate('/about')} />
+          <FaWhatsapp
+            size={30}
+            onClick={() => navigate('/about')}
+            color="black"
+          />
         </ItemList>
         <ItemList>
-          <FaInstagram size={30} onClick={() => navigate('/about')} />
+          <FaInstagram
+            size={30}
+            onClick={() => navigate('/about')}
+            color="black"
+          />
         </ItemList>
         <ItemList>
-          <FaEnvelope size={30} onClick={() => navigate('/about')} />
+          <FaEnvelope
+            size={30}
+            onClick={() => navigate('/about')}
+            color="black"
+          />
         </ItemList>
         <ItemList>
-          <FaFacebook size={30} onClick={() => navigate('/about')} />
+          <FaFacebook
+            size={30}
+            onClick={() => navigate('/about')}
+            color="black"
+          />
         </ItemList>
       </List>
     </Container>

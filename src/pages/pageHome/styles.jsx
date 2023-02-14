@@ -4,6 +4,13 @@ export const Container = styled.div`
   position: relative;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
-  background-image: linear-gradient(black, black, #141414);
+  background-color: #dbdbdb;
+  z-index: 1;
+`;
+
+export const Logo = styled.img`
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 3vh;
+  height: 10vh;
 `;
