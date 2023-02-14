@@ -1,13 +1,20 @@
 import React from 'react';
 import {
-  FaWhatsapp,
-  FaInstagram,
-  FaEnvelope,
-  FaFacebook,
-} from 'react-icons/fa';
+  IoLogoWhatsapp,
+  IoLogoInstagram,
+  IoMailOutline,
+  IoLogoFacebook,
+} from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 
-import { Container, List, ItemList } from './styles';
+import {
+  Container,
+  List,
+  ItemList,
+  TextContainer,
+  LocalAddress,
+  CellPhone,
+} from './styles';
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -16,34 +23,41 @@ export default function Footer() {
     <Container>
       <List>
         <ItemList>
-          <FaWhatsapp
+          <IoLogoWhatsapp
             size={30}
             onClick={() => navigate('/about')}
             color="black"
           />
         </ItemList>
         <ItemList>
-          <FaInstagram
+          <IoLogoInstagram
             size={30}
             onClick={() => navigate('/about')}
             color="black"
           />
         </ItemList>
         <ItemList>
-          <FaEnvelope
+          <IoMailOutline
             size={30}
             onClick={() => navigate('/about')}
             color="black"
           />
         </ItemList>
         <ItemList>
-          <FaFacebook
+          <IoLogoFacebook
             size={30}
             onClick={() => navigate('/about')}
             color="black"
           />
         </ItemList>
       </List>
+      <TextContainer>
+        <LocalAddress>
+          R. Francisco Cruvinel de Resende, 272, Mirante
+        </LocalAddress>
+        <LocalAddress>Juruaia - MG</LocalAddress>
+        <CellPhone>(35) 3553-1894</CellPhone>
+      </TextContainer>
     </Container>
   );
 }
