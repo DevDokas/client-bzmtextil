@@ -10,9 +10,12 @@ export const Container = styled.div`
 export const Slider = styled(Carousel)`
   position: absolute;
   top: 16%;
+  cursor: pointer;
 `;
 
 export const Image = styled.img`
   height: 70vh;
   width: 100vw;
 `;
+
+export const Title = styled.p``;

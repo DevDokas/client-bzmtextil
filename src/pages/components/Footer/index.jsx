@@ -25,28 +25,37 @@ export default function Footer() {
         <ItemList>
           <IoLogoWhatsapp
             size={30}
-            onClick={() => navigate('/about')}
+            onClick={() => navigate('/whatsapp-contact', { replace: false })}
             color="black"
           />
         </ItemList>
         <ItemList>
           <IoLogoInstagram
             size={30}
-            onClick={() => navigate('/about')}
+            onClick={() =>
+              window.open('https://www.instagram.com/bzmtextil/', '_blank')
+            }
             color="black"
           />
         </ItemList>
         <ItemList>
           <IoMailOutline
             size={30}
-            onClick={() => navigate('/about')}
+            onClick={() =>
+              window.open(
+                'https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=bzmtextiljuruaia@gmail.com',
+                '_blank'
+              )
+            }
             color="black"
           />
         </ItemList>
         <ItemList>
           <IoLogoFacebook
             size={30}
-            onClick={() => navigate('/about')}
+            onClick={() =>
+              window.open('https://www.facebook.com/bzmtextil/', '_blank')
+            }
             color="black"
           />
         </ItemList>
