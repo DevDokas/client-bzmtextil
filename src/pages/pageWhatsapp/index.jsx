@@ -10,13 +10,16 @@ import {
   Title,
   WhatsAppLogo,
   ProfileImage,
+  TextContainer,
+  LocalAddress,
+  CellPhone,
 } from './styles';
 
 import bzmlogo from '../../assets/bzmlogo.png';
 import whatsapp from '../../assets/whatsapp.png';
-import woman1 from '../../assets/woman1.jpg';
-import woman2 from '../../assets/woman2.jpg';
-import woman3 from '../../assets/woman3.jpg';
+import woman1 from '../../assets/jessica.jpg';
+import woman2 from '../../assets/dayane.jpg';
+import woman3 from '../../assets/patricia.jpg';
 
 export default function WhatsApp() {
   const navigate = useNavigate();
@@ -25,7 +28,6 @@ export default function WhatsApp() {
     <Container>
       <Logo src={bzmlogo} onClick={() => navigate(-1)} />
       <Title>Contate-nos também pelo WhatsApp!</Title>
-      <WhatsAppLogo src={whatsapp} />
       <List>
         <Item>
           <ProfileImage
@@ -42,6 +44,7 @@ export default function WhatsApp() {
             target="_blank"
             rel="noreferrer"
           >
+            <WhatsAppLogo src={whatsapp} />
             Jéssica
           </Link>
         </Item>
@@ -60,6 +63,7 @@ export default function WhatsApp() {
             target="_blank"
             rel="noreferrer"
           >
+            <WhatsAppLogo src={whatsapp} />
             Dayani
           </Link>
         </Item>
@@ -78,10 +82,18 @@ export default function WhatsApp() {
             target="_blank"
             rel="noreferrer"
           >
+            <WhatsAppLogo src={whatsapp} />
             Patrícia
           </Link>
         </Item>
       </List>
+      <TextContainer>
+        <LocalAddress>
+          R. Francisco Cruvinel de Resende, 272, Mirante
+        </LocalAddress>
+        <LocalAddress>Juruaia - MG</LocalAddress>
+        <CellPhone>(35) 3553-1894</CellPhone>
+      </TextContainer>
     </Container>
   );
 }
