@@ -1,5 +1,5 @@
 import React from 'react';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import './carrossel.css'; // requires a loader
 import { useNavigate } from 'react-router-dom';
 
 import { Container, Slider, Image, Title } from './styles';
