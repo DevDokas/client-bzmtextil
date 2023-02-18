@@ -64,7 +64,7 @@ export const TextContainer = styled.div`
   color: black;
   font-size: 12px;
   line-height: 1.3;
-  margin-top: 15px;
+  margin-top: 13px;
 `;
 
 export const LocalAddress = styled.p`
