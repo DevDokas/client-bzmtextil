@@ -34,10 +34,7 @@ body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
-
-  @media (min-height: 480px) and (max-height: 500px) and (min-width: 320px) and (max-width: 360px) {
-    height: 100vh;
-  }
+  background-color: #ffffff;
 }
 
 label{

@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Bars = styled(FaBars)`
   position: absolute;
-  top: 3%;
+  top: 35px;
   left: 20px;
   cursor: pointer;
 `;
