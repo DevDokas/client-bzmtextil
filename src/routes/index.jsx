@@ -4,9 +4,10 @@ import axios from '../services/axios';
 
 // Pages
 import Home from '../pages/pageHome/pageHome';
-import About from '../pages/pageAbout/pageAbout';
+import About from '../pages/pageAbout';
 import Page404 from '../pages/page404/page404';
 import WhatsApp from '../pages/pageWhatsapp';
+import SAC from '../pages/pageSAC';
 
 import PrivateRoute from './PrivateRoute';
 
@@ -20,7 +21,7 @@ export default function AppRoutes() {
       {/* Store */}
       <Route path="/store/" element={<Page404 />} />
       {/* SAC */}
-      <Route path="/sac/" element={<Page404 />} />
+      <Route path="/sac/" element={<SAC />} />
       {/* WhatsApp Page */}
       <Route path="/whatsapp-contact" element={<WhatsApp />} />
       {/* Tecidos */}

@@ -11,6 +11,7 @@ import {
   AboutMedia,
   AboutP,
   Map,
+  ImageBZM,
 } from './styles';
 
 // Components
@@ -19,6 +20,7 @@ import Footer from '../components/Footer';
 
 import bzmlogo from '../../assets/bzmlogo.png';
 import bzmvideo from '../../assets/videobzmtest.mp4';
+import bzmfoto from '../../assets/bzmfoto.jpg';
 
 export default function AboutApp() {
   return (
@@ -28,7 +30,7 @@ export default function AboutApp() {
       <ContentContainer>
         <AboutContainer>
           <Title>Quem Somos</Title>
-          <AboutMedia src={bzmvideo} autoPlay loop />
+          <AboutMedia src={bzmvideo} autoPlay loop preload="auto" />
           <AboutP>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
             repellendus modi provident nemo vero dolore minus velit error?
@@ -39,6 +41,7 @@ export default function AboutApp() {
             voluptatibus facere itaque mollitia doloremque tenetur.
           </AboutP>
         </AboutContainer>
+        <ImageBZM src={bzmfoto} />
         <LocationContainer>
           <Title>Onde Estamos</Title>
           <Map

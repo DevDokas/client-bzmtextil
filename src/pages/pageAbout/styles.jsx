@@ -3,7 +3,7 @@ import * as Color from '../../config/colors';
 
 export const Container = styled.div`
   position: relative;
-  height: 180vh;
+  height: auto;
   width: 100vw;
   overflow: hidden;
 `;
@@ -35,10 +35,10 @@ export const AboutMedia = styled.video`
 
 export const AboutP = styled.p`
   color: #141414;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.2;
   background-color: ${Color.SectionTextColor};
-  height: 400px;
+  height: auto;
   padding: 15px;
 `;
 
@@ -62,4 +62,10 @@ export const Map = styled.iframe`
   height: 50vh;
   width: 100%;
   border: 0;
+  margin-bottom: 150px;
+`;
+
+export const ImageBZM = styled.img`
+  width: 100%;
+  overflow: hidden;
 `;
