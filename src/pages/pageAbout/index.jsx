@@ -1,5 +1,6 @@
 // React & Etc
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   Container,
@@ -26,7 +27,9 @@ export default function AboutApp() {
   return (
     <Container>
       <Nav />
-      <Logo src={bzmlogo} />
+      <Link to="/">
+        <Logo src={bzmlogo} />
+      </Link>
       <ContentContainer>
         <AboutContainer>
           <Title>Quem Somos</Title>

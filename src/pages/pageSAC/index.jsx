@@ -1,28 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
+import { Link } from 'react-router-dom';
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 
 import {
   Container,
+  InputContainer,
+  Logo,
   Form,
   Title,
-  InputSubject,
-  InputUserEmail,
+  Input,
   InputMessage,
   SubmitButton,
 } from './styles';
 
+import bzmlogo from '../../assets/bzmlogo.png';
+
 export default function SACPage() {
+  const [subject, setSubject] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  function SendEmail(e) {
+    e.preventDefault();
+
+    if (subject === '' || email === '' || message === '') {
+      toast.error('Preencha todos os campos');
+    } else {
+      toast.success('Deu certo');
+    }
+  }
+
   return (
     <Container>
       <Nav />
-      <Form action="">
-        <Title>Como podemos ajudar? Entre em contato conosco!</Title>
-        <InputSubject type="text" />
-        <InputUserEmail type="email" />
-        <InputMessage name="" id="" cols="30" rows="10" />
-        <SubmitButton>Enviar</SubmitButton>
+      <Link to="/">
+        <Logo src={bzmlogo} />
+      </Link>
+      <Form onSubmit={SendEmail}>
+        <Title>
+          Como podemos ajudar? <br /> Entre em contato conosco!
+        </Title>
+        <InputContainer>
+          <Input
+            type="text"
+            placeholder="Assunto"
+            onChange={(e) => setSubject(e.target.value)}
+            value={subject}
+          />
+          <Input
+            type="text"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+          <InputMessage
+            placeholder="Explique melhor como podemos ajuda-lo(a)."
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+          />
+        </InputContainer>
+        <SubmitButton type="submit">Enviar</SubmitButton>
       </Form>
+      <Footer />
     </Container>
   );
 }

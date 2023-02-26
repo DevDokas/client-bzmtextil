@@ -1,5 +1,6 @@
 // React & Etc
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Components
 import Nav from '../components/Nav';
@@ -15,7 +16,9 @@ export default function Home() {
   return (
     <Container>
       <Nav />
-      <Logo src={bzmlogo} />
+      <Link to="/">
+        <Logo src={bzmlogo} />
+      </Link>
       <Carrossel />
       <Footer />
     </Container>
