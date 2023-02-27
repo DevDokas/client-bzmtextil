@@ -1,6 +1,9 @@
 import styled from 'styled-components';
+import * as Color from '../../config/colors';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  height: auto;
+`;
 
 export const Logo = styled.img`
   position: absolute;
@@ -10,17 +13,22 @@ export const Logo = styled.img`
 `;
 
 export const Form = styled.form`
-  margin-top: 150px;
+  margin-top: 140px;
   display: flex;
   flex-direction: column;
   background-color: grey;
   width: 100vw;
   padding: 25px;
+  outline: 1vh solid ${Color.DetailColor};
 `;
 
 export const Title = styled.h1`
   font-size: 2.5vh;
   color: black;
+`;
+
+export const SACImage = styled.img`
+  width: 80vw;
 `;
 
 export const InputContainer = styled.div`
@@ -39,8 +47,8 @@ export const Input = styled.input`
 `;
 
 export const InputMessage = styled.textarea`
-  resize: vertical;
-  min-height: 4.5vh;
+  resize: none;
+  min-height: 18vh;
   width: 80vw;
   background-color: #5a5a5a;
   outline: 0;
@@ -63,4 +71,9 @@ export const InputMessage = styled.textarea`
 export const SubmitButton = styled.button`
   height: 5.5vh;
   width: 60vw;
+  transition: 0.1s;
+
+  &:active {
+    background-color: red;
+  }
 `;

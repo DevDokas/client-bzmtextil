@@ -32,5 +32,6 @@ module.exports = {
     'react/jsx-no-bind': 'off',
     'default-param-last': 'off',
     'no-shadow': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };

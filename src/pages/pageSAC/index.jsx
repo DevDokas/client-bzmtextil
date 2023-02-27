@@ -11,12 +11,14 @@ import {
   Logo,
   Form,
   Title,
+  SACImage,
   Input,
   InputMessage,
   SubmitButton,
 } from './styles';
 
 import bzmlogo from '../../assets/bzmlogo.png';
+import sac from '../../assets/SAC.png';
 
 export default function SACPage() {
   const [subject, setSubject] = useState('');
@@ -41,7 +43,11 @@ export default function SACPage() {
       </Link>
       <Form onSubmit={SendEmail}>
         <Title>
-          Como podemos ajudar? <br /> Entre em contato conosco!
+          Como podemos ajudar?
+          <br />
+          <SACImage src={sac} alt="" />
+          <br />
+          Entre em contato conosco!
         </Title>
         <InputContainer>
           <Input

@@ -4,9 +4,12 @@
         "botao",
         "BOTAO",
         "bzmcard",
+        "bzmfoto",
+        "bzmvideo",
         "calculadoracard",
         "persistor",
         "reduxjs",
-        "userimg"
+        "userimg",
+        "videobzmtest"
     ]
 }
