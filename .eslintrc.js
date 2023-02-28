@@ -2,11 +2,14 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
+    node: true,
   },
   extends: [
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
   parser: '@babel/eslint-parser',
   parserOptions: {
@@ -21,6 +24,11 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', 'prettier', 'react-hooks'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': 0,
@@ -33,5 +41,6 @@ module.exports = {
     'default-param-last': 'off',
     'no-shadow': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };
