@@ -30,6 +30,7 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.p`
+  filter: drop-shadow(5px 5px 4px #000000);
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
