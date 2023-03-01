@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import {
   Container,
   InputContainer,
+  FooterContainer,
   Logo,
   Form,
   Title,
@@ -70,7 +71,9 @@ export default function SACPage() {
         </InputContainer>
         <SubmitButton type="submit">Enviar</SubmitButton>
       </Form>
-      <Footer />
+      <FooterContainer>
+        <Footer />
+      </FooterContainer>
     </Container>
   );
 }

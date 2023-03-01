@@ -18,7 +18,7 @@ export const Form = styled.form`
   flex-direction: column;
   background-color: grey;
   width: 100vw;
-  padding: 25px;
+  padding: 15px;
   outline: 1vh solid ${Color.DetailColor};
 `;
 
@@ -76,4 +76,9 @@ export const SubmitButton = styled.button`
   &:active {
     background-color: red;
   }
+`;
+
+export const FooterContainer = styled.div`
+  position: relative;
+  height: 140px;
 `;

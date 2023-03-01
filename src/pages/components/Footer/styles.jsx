@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   position: absolute;
   transform: translate(-50%, 0);
-  bottom: 1.5%;
+  bottom: 10px;
   left: 50%;
   z-index: 0;
 `;
