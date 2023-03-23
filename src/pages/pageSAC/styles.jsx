@@ -71,10 +71,13 @@ export const InputMessage = styled.textarea`
 export const SubmitButton = styled.button`
   height: 5.5vh;
   width: 60vw;
-  transition: 0.1s;
+  border: 0;
+  border-radius: 1vh;
+  transition: 0.01s ease-in-out;
 
   &:active {
-    background-color: red;
+    transform: scale(0.95);
+    background-color: rgba(0, 0, 0, 0.4);
   }
 `;
 
